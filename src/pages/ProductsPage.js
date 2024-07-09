@@ -3,15 +3,19 @@ import { SquaredImg } from "../ui/Images";
 
 import FirstProduct from "../assets/productDisplay/karly-gomez-vhumDnhVdrQ-unsplash 1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faCartShopping,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 export default function ProductsPage() {
   return (
     <>
       <section className="mx-[10%] my-[3rem]">
         <h1 className="text-center text-4xl my-[3rem]">Products List</h1>
-        <main className="flex w-full min-h-[40vh] gap-[2%]">
-          <div className="w-[20%]">
+        <main className="md:flex block w-full min-h-[40vh] gap-[2%]">
+          <div className="w-[20%] hidden md:block">
             <article className="bg-white shadow min-h-[140px] pb-4">
               <h3 className="bg-primary_color text-center font-sans_serif py-2 text-white">
                 Product Category
@@ -48,10 +52,10 @@ export default function ProductsPage() {
               </ul>
             </article>
           </div>
-          <div className="grid w-[70%] gap-6 grid-cols-2">
+          <div className="md:grid *:block block md:w-[70%] w-full gap-6 grid-cols-2">
             <Link
               to="someProductId"
-              className="bg-white my-4 p-4 shadow-lg min-h-[140px] pb-4"
+              className="bg-white block my-4 p-4 shadow-lg min-h-[140px] pb-4"
             >
               <div>
                 <SquaredImg imgSrc={FirstProduct} />
@@ -141,15 +145,19 @@ export default function ProductsPage() {
         </main>
 
         <div className="flex my-[3rem] gap-[2%] justify-end">
-          <p>prev</p>
+          <p>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </p>
           <ul className="flex gap-[10px] ">
             <li>1</li>
-            <li className="text-red-600">2</li>
+            <li className="text-white bg-text_heading_color  px-2">2</li>
             <li>3</li>
             <li>4</li>
             <li>5</li>
           </ul>
-          <p>next</p>
+          <p>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </p>
         </div>
       </section>
       <FooterSection />

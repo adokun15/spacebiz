@@ -8,7 +8,7 @@ export default function BestSellerSection() {
       <header>
         <h1 className="text-center text-3xl">Best Seller</h1>
       </header>
-      <article className="mx-[10%] justify-between md:flex block gap-10">
+      <article className="mx-[10%] *:block justify-between md:flex block gap-10">
         <Link
           to="products/someProductId"
           className="bg-white my-4 p-4 shadow-lg min-h-[140px] pb-4"

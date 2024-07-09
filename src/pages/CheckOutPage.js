@@ -8,8 +8,8 @@ export default function CheckOutPage() {
   return (
     <div class="relative">
       {checkOutModal && <CheckOutModal />}
-      <main className="flex">
-        <article className="bg-gray-300 w-[50%] min-h-[100vh] py-10 px-[5%]">
+      <main className="md:flex block">
+        <article className="bg-gray-300 md:w-[50%] w-full md:min-h-[100vh] py-10 px-[5%]">
           <p>
             <Link to="..">Back</Link>
           </p>

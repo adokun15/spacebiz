@@ -1,56 +1,70 @@
-import Product1 from "../assets/productDisplay/blue-ceramic-pot.png";
+import Product1 from "../assets/productDisplay/karly-gomez-vhumDnhVdrQ-unsplash 1.png";
+import ProductT1 from "../assets/productDisplay/red ceramic pot/becca-tapert-A_L2xNKgENg-unsplash 1.png";
+import ProductT2 from "../assets/productDisplay/red ceramic pot/becca-tapert-sY5RjMB1KkE-unsplash 1.png";
+import ProductT3 from "../assets/productDisplay/red ceramic pot/kelsey-todd-8T8NEADBxyo-unsplash 1.png";
 import Rating3 from "../assets/ratings/3-star.png";
-import colorAvaliable from "../assets/productDisplay/available-color/red-black-slate.png";
 import FooterSection from "../components/FooterSection";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SquaredImg } from "../ui/Images";
 
 import Review1 from "../assets/Review/portrait-upset-american-black-person_23-2148749581 1.png";
+import Review2 from "../assets/Review/smiley-african-woman-with-golden-earrings_23-2148747979 1.png";
 export default function SingleProductPage() {
+  const navigate = useNavigate();
+  const toCart = () => navigate("/cart");
+  const toCheckOut = () => navigate("/checkout");
   return (
     <>
       <section className="mx-[10%] my-[3rem]">
         <h1 className="text-center text-4xl my-[3rem]">Product Details</h1>
-        <main className="flex gap-[2%]">
+        <main className="md:flex block gap-[2%]">
           <div className="w-[50%]">
             <img src={Product1} alt="product" />
           </div>
-          <article className="w-[50%]">
+          <article className="md:w-[50%] w-full">
             <header>
-              <h2>CERAMIC POT</h2>
+              <h2 className="text-2xl my-5">CERAMIC POT</h2>
               <h4>CERAMIC POT with blue color</h4>
             </header>
             <div className="my-4">
               <img src={Rating3} alt="product" />
             </div>
             <p className="min-h-[10vh] my-1">description</p>
-            <div className="flex justify-between my-4 px-5 w-full">
-              <img src={colorAvaliable} alt="product" />
-              <p>use coupon</p>
-            </div>
             <div className="flex justify-between my-4">
               <p>
-                price<span>#29000</span>
+                <span>#29000</span>
               </p>
               <div>
-                <button>-</button>
-                <span>2</span>
-                <button>+</button>
+                <button className="border border-solid border-primary_color px-3">
+                  -
+                </button>
+                <span className="mx-4">2</span>
+                <button className="bg-primary_color px-3 text-white">+</button>
               </div>
             </div>
 
-            <div className="flex justify-between my-4">
-              <button>Add to Cart</button>
-              <button>Buy now</button>
+            <div className="flex gap-4 md:justify-between my-4">
+              <button
+                onClick={toCart}
+                className="border border-solid border-primary_color px-10 py-3"
+              >
+                Add to Cart
+              </button>
+              <button
+                onClick={toCheckOut}
+                className="bg-primary_color px-10 py-3 text-white"
+              >
+                Buy now
+              </button>
             </div>
           </article>
         </main>
-        <div className="flex ">
-          <img className="h-[100px] " src={Product1} alt="product" />
-          <img src={Product1} alt="product" />
-          <img src={Product1} alt="product" />
+        <div className="flex w-full px-5 md:w-[50%] gap-5">
+          <img className="h-[100px] " src={ProductT1} alt="product" />
+          <img src={ProductT2} className="h-[100px]" alt="product" />
+          <img src={ProductT3} alt="product" className="h-[100px]" />
         </div>
 
         <div className="my-6">
@@ -126,13 +140,14 @@ export default function SingleProductPage() {
         </div>
 
         <div>
-          <article>
+          <article className="mb-5">
             <h4 className="bg-primary_color text-white w-fit px-4 py-2  text-2xl">
               Description
             </h4>
             <p>Some Description</p>
           </article>
-          <article>
+
+          <article className="my-5">
             <h4 className="bg-primary_color text-white w-fit px-4 py-2  text-2xl">
               Key details
             </h4>
@@ -146,7 +161,10 @@ export default function SingleProductPage() {
               <div className="bg-white my-4 px-3 rounded shadow-lg">
                 <div className="flex justify-between ">
                   <div className="flex gap-4">
-                    <SquaredImg cls="h-[100px] w-[100px]" imgSrc={Review1} />
+                    <SquaredImg
+                      scls="h-[100px] rounded-[50%] w-[100px]"
+                      imgSrc={Review1}
+                    />
                     <div>
                       <h2 className="text-3xl ">Title 1</h2>
                       <p className="opacity-75">Descripption</p>
@@ -154,20 +172,23 @@ export default function SingleProductPage() {
                   </div>
                   <h3 className="">12 HOURS AGO</h3>
                 </div>
-                <p>This is some Comment</p>
+                <p>This is some Comment 1</p>
               </div>
               <div className="bg-white my-4 px-3 rounded shadow-lg">
                 <div className="flex justify-between ">
                   <div className="flex gap-4">
-                    <SquaredImg cls="h-[100px] w-[100px]" imgSrc={Review1} />
+                    <SquaredImg
+                      cls="h-[100px] rounded-[50%] w-[100px]"
+                      imgSrc={Review2}
+                    />
                     <div>
-                      <h2 className="text-3xl ">Title 1</h2>
-                      <p className="opacity-75">Descripption</p>
+                      <h2 className="text-3xl ">Title 2</h2>
+                      <p className="opacity-75">Description</p>
                     </div>
                   </div>
-                  <h3 className="">12 HOURS AGO</h3>
+                  <h3 className="">2 HOURS AGO</h3>
                 </div>
-                <p>This is some Comment</p>
+                <p>This is some Comment 2</p>
               </div>
             </div>
           </article>

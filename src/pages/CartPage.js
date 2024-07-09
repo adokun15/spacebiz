@@ -2,7 +2,12 @@ import Img1 from "../assets/productDisplay/blue-ceramic-pot.png";
 import { faTrash } from "@fortawesome/free-solid-svg-icons/faTrash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SquaredImg } from "../ui/Images";
+import { useNavigate } from "react-router-dom";
 export default function CartPage() {
+  const navigate = useNavigate();
+  const toCheckout = () => {
+    navigate("/checkout");
+  };
   return (
     <section className="mx-[10%]">
       <div className="flex gap-7 my-10 items-center">
@@ -13,8 +18,8 @@ export default function CartPage() {
           <span>Delete</span>
         </p>
       </div>
-      <main className="flex gap-4">
-        <article className="w-[65%]  *:min-h-[20vh]">
+      <main className="md:flex gap-4 block">
+        <article className="md:w-[65%] w-full  *:min-h-[20vh]">
           <div className="bg-white flex justify-between px-3 rounded shadow-lg">
             <div className="flex gap-4">
               <SquaredImg cls="h-[100px] w-[100px]" imgSrc={Img1} />
@@ -79,7 +84,7 @@ export default function CartPage() {
             </div>
           </div>
         </article>
-        <article className="w-[30%]">
+        <article className="md:w-[30%] w-full">
           <div className="min-h-[40vh] bg-white shadow-md px-[5%]">
             <h2 className="bg-primary_color py-4 text-white text-center">
               Order Summary
@@ -93,13 +98,13 @@ export default function CartPage() {
               <li>
                 <p>
                   {" "}
-                  Sub-Total: <span>#30000</span>
+                  coupon: <span>#300</span>
                 </p>
               </li>
               <li>
                 <p>
                   {" "}
-                  Sub-Total: <span>#30000</span>
+                  Total: <span>#3300</span>
                 </p>
               </li>
               <li>
@@ -110,7 +115,10 @@ export default function CartPage() {
               </li>
             </ul>
           </div>
-          <button className="w-full my-8 bg-primary_color text-white py-2">
+          <button
+            onClick={toCheckout}
+            className="w-full my-8 bg-primary_color text-white py-2"
+          >
             Check out
           </button>
         </article>

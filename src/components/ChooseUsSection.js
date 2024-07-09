@@ -19,15 +19,15 @@ export default function ChooseUsSection() {
         </p>
       </header>
 
-      <article className="flex py-[5rem] gap-[5%] ">
-        <div className=" relative max-h-[40vh]">
+      <article className="md:flex block py-[5rem] gap-[5%] ">
+        <div className="relative md:w-[50%]">
           <SquaredImg
-            className="absolute top-0 h-[200px] w-[200px]"
+            className="  h-[200px] w-[200px]"
             imgSrc={firstImgBehind}
           />
-          <SquaredImg className="absolute bottom-0" imgSrc={firstImg} />
         </div>
-        <div>
+
+        <div className="md:w-[50%]">
           <TitleBarHeading>Our Commitment to sustainability</TitleBarHeading>
           <p>
             We are committed to sustainability in every aspect of our business.
@@ -38,20 +38,22 @@ export default function ChooseUsSection() {
           </p>
         </div>
       </article>
-      <article className="flex gap-[5%] max-h-40vh">
-        <div>
-          <TitleBarHeading>HII</TitleBarHeading>
-          <p>fsjfnsjf</p>
+      <article className="md:flex block gap-[5%] max-h-40vh">
+        <div className="relative md:w-[50%] md:hidden">
+          <SquaredImg className="  h-[200px] w-[200px]" imgSrc={firstImg} />
         </div>
 
-        <div>
-          <SquaredImg imgSrc={firstImgBehind} />
-          <SquaredImg imgSrc={firstImg} />
+        <div className="md:w-[50%]">
+          <TitleBarHeading>Title Heading</TitleBarHeading>
+          <p>Some Description</p>
+        </div>
+        <div className="relative hidden md:block w-[50%]">
+          <SquaredImg className="  h-[200px] w-[200px]" imgSrc={firstImg} />
         </div>
       </article>
 
-      <div>
-        <p>afsf f</p>
+      <div className="text-center my-10">
+        <p>Some Other Descripption</p>
       </div>
     </section>
   );

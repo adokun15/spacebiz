@@ -4,7 +4,6 @@ import ChooseUsSection from "../components/ChooseUsSection";
 import FooterSection from "../components/FooterSection";
 import HeroSection from "../components/HeroSection";
 import NewsLetterSection from "../components/NewsletterSection";
-import ReviewsSection from "../components/ReviewsSection";
 
 export default function HomePage() {
   return (
@@ -12,7 +11,7 @@ export default function HomePage() {
       <HeroSection />
       <ChooseUsSection />
       <BestSellerSection />
-      <ReviewsSection />
+      {/* <ReviewsSection />*/}
       <BlogSection />
       <NewsLetterSection />
       <FooterSection />

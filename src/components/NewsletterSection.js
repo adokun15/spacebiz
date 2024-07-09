@@ -5,8 +5,8 @@ export default function NewsLetterSection() {
       <header className="text-center text-5xl font-sans_serif my-5">
         <h1>Newsletter</h1>
       </header>
-      <div className="flex bg-white rounded">
-        <div className="w-1/2 p-[5%]">
+      <div className="md:flex block bg-white rounded">
+        <div className="md:w-1/2 p-[5%]">
           <h2 className="text-3xl font-sans_serif">
             Sign Up for a Newsletter Today
           </h2>
@@ -23,7 +23,7 @@ export default function NewsLetterSection() {
           </form>
         </div>
 
-        <div className="w-1/2">
+        <div className="md:w-1/2">
           <img src={NewsletterImg} className="h-full" alt="some pic" />
         </div>
       </div>
