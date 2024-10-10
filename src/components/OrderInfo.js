@@ -5,7 +5,7 @@ import Card from "./Card";
 const OrderInfo = () => {
   return (
     <main className="md:flex *:w-full  gap-4">
-      <Card className="space-y-6">
+      <Card className="">
         <div classNam="space-y-4">
           <div>
             <h2 className="text-3xl">Checkout Order</h2>

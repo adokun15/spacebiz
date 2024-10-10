@@ -65,7 +65,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-
         roboto: ["Roboto Condensed", "sans-serif"], //large header
         oswald: ["Oswald", "sans-serif"], //normal header
         logo: ["Playwrite PL", "sans-serif"],

@@ -9,6 +9,9 @@ import { DbError } from "../../utils/ErrorHandlers";
 import { api } from "../api";
 import { auth } from "../../firebase/init";
 
+//
+
+
 const UserSlice = api.injectEndpoints({
   endpoints: (builder) => ({
     authorize: builder.mutation({
